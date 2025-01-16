@@ -13,7 +13,7 @@ const Header = () => {
         <div className="header-search flex-1 flex justify-center">
         <Input className='rounded-full max-w-[800px]' size="large" placeholder="large size" prefix={<SearchOutlined />} />
         </div>
-        <div className="menu-links flex flex-row gap-7 justify-between items-center md:static fixed bottom-0 md:w-auto w-full md:bg-transparent bg-white left-0 md:border-t-0 border-t md:px-0 px-4 py-3">
+        <div className="menu-links flex flex-row gap-7 justify-between items-center md:static fixed z-50 bottom-0 md:w-auto w-full md:bg-transparent bg-white left-0 md:border-t-0 border-t md:px-0 px-4 py-3">
             <a href="/" className='menu-link flex flex-col items-center hover:text-[#40a9ff]'>
                 <HomeOutlined className='md:text-2xl text-xl'/>
                 <span className='md:text-xs text-[10px]'>Ana Sayfa</span>

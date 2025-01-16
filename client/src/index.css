@@ -10,7 +10,12 @@ body {
   font-family: "Electrolize", serif;
 }
 
-.ant-btn-primary {
-  color: #1677ff;
-}
 
+@media (min-widht:768px) {
+  body {
+    overflow: hidden;
+  }
+  .categories::-webkit-scrollbar {
+    display: none;
+  }
+}
