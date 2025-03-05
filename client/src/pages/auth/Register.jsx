@@ -23,7 +23,7 @@ const Register = () => {
                 rules={[{required:true,
                 message:"Bu alan boş bırakılamaz!"}]}
                 >
-                <Input.Password />
+                <Input />
                 </Form.Item>
                 <Form.Item
                 label="Şifre"
@@ -31,13 +31,27 @@ const Register = () => {
                 rules={[{required:true,
                 message:"Bu alan boş bırakılamaz!"}]}
                 >
-                <Input />
+                <Input.Password />
                 </Form.Item>
                 <Form.Item
                 label="Şifre Tekrar"
                 name={"passwordAgain"}
-                rules={[{required:true,
-                message:"Bu alan boş bırakılamaz!"}]}
+                dependencies = {["password"]}
+                rules={[
+                    {
+                      required: true,
+                      message: 'Şifreler uyumlu değil!',
+                    },
+                    ({ getFieldValue }) => ({
+                      validator(_, value) {
+                        if (!value || getFieldValue('password') === value) {
+                          return Promise.resolve();
+                        }
+                        return Promise.reject(new Error('Şifreler uyumlu değil!'));
+                      },
+                    }),
+                  ]}
+                
                 >
                 <Input.Password />
                 </Form.Item>
