@@ -3,10 +3,9 @@ const mongoose = require("mongoose");
 
 const UserShema = mongoose.Schema(
     {
-        userName : {type : String,required : true},
+        username : {type : String,required : true},
         email : {type : String,required : true},
         password : {type : String , required : true},
-        verify : {type : Boolean , required : true}
     },
     {timestamps : true}
 )
