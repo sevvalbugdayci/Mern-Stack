@@ -42,7 +42,7 @@ const Header = () => {
                 <span className='md:text-xs text-[10px]'>Çıkış</span>
             </Link>
         </div>
-        <Badge count={5} className="md:hidden  flex">
+        <Badge count={5} className="hidden md:!hidden flex">
                <Link to={"/"} className='menu-link flex flex-col items-center hover:text-[#40a9ff]'>
                <ShoppingCartOutlined className='md:text-2xl text-xl'/>
                 <span className='md:text-xs text-[10px]'>Sepet</span>
